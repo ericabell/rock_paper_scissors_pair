@@ -28,7 +28,8 @@ button:hover {
 #outcome {
   /*border-style: solid;
   border-width: 1px;*/
-  display: flex;
+  display: none;
+  /*display: flex;*/
   flex-basis: 100%;
   justify-content: center;
 }

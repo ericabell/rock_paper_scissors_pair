@@ -10,6 +10,10 @@ var app = new Vue({
 function playGame() {
   console.log("Clicked");
 
+  // show the outcomes
+  var outcome_div = document.getElementById('outcome');
+  outcome_div.style.display = "flex";
+
   const throws = ['rock', 'paper', 'scissors'];
   const image_urls = ['url(resources/rock.png)', 'url(resources/paper.png)', 'url(resources/scissors.png)', 'url(resources/win.jpeg)', 'url(resources/looser.jpeg)', 'url(resources/tie.jpeg)']
 
