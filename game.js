@@ -26,7 +26,7 @@ function playGame() {
 
   // Generate random numbers for the throw
   const computer_choice = Math.floor(Math.random()*throws.length);
-  const me_choice = Math.floor(Math.random()*throws.length);
+  const me_choice = document.forms[0].elements['choice'].value;
 
   // Extract the named choice
   const computer = throws[computer_choice];
