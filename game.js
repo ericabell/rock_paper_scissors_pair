@@ -24,14 +24,13 @@ function playGame() {
   const lose_img = 4;
   const tie_img = 5;
 
-  // Variables
+  // Generate random numbers for the throw
   const computer_choice = Math.floor(Math.random()*throws.length);
-  // const me_choice = Math.floor(Math.random()*throws.length);
-  // get the user's choice from the radio box instead of random
-  const me_choice = document.forms[0].elements['choice'].value;
+  const me_choice = Math.floor(Math.random()*throws.length);
 
+  // Extract the named choice
   const computer = throws[computer_choice];
-  let me = throws[me_choice];
+  const me = throws[me_choice];
 
   console.log("Computer throws: " + computer);
   console.log("You threw: " + me);
@@ -43,9 +42,17 @@ function playGame() {
 
   image_me.style.backgroundImage = image_urls[me_choice];
   image_computer.style.backgroundImage = image_urls[computer_choice];
-  // image_me.innerHTML = "Me: " + me;
-  // image_computer.innerHTML = "Computer: " + computer;
 
+  // Throws
+  // 6.0 Player has the full range of throws to play, as follows:
+  //
+  // 6.0.1 Rock: wins against scissors, loses to paper and stalemates against itself
+  //
+  // 6.0.2 Paper wins against Rock, loses to scissors and stalemates against itself
+  //
+  // 6.0.3 Scissors wins against paper, loses to rock and stalemates against itself
+
+// COMPUTER WINS
   if( computer === 'rock' && me === 'scissors' ){
     // image_winner.innerHTML = "computer wins";
     image_winner.style.backgroundImage = image_urls[lose_img]
@@ -66,6 +73,7 @@ function playGame() {
 
   }
 
+// YOU WIN
   else if( me === 'rock' && computer === 'scissors' ){
     // image_winner.innerHTML = "I win";
     image_winner.style.backgroundImage = image_urls[win_img]
