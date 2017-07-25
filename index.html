@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="style.css">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
   <main>
@@ -19,12 +21,12 @@
     <div id="outcome">
       <div id="computer">
         <div class="caption">Computer</div>
-        <div class="streak">0</div>
+        <div class="streak">{{ computer }}</div>
       </div>
 
       <div id="me">
         <div class="caption">Me</div>
-        <div class="streak">0</div>
+        <div class="streak">{{ me }}</div>
       </div>
 
       <div id="winner">

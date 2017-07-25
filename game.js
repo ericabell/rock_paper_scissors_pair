@@ -1,7 +1,11 @@
-let streaks = {
-  me: 0;
-  computer: 0;
-}
+var app = new Vue({
+  el: '#outcome',
+  data: {
+    me: 0,
+    computer: 0
+  }
+})
+
 
 function playGame() {
   console.log("Clicked");
@@ -31,31 +35,42 @@ function playGame() {
   if( computer === 'rock' && me === 'scissors' ){
     // image_winner.innerHTML = "computer wins";
     image_winner.style.backgroundImage = image_urls[3]
+    app.me +=1;
   }
 
   else if( computer === 'paper' && me === 'rock' ){
     // image_winner.innerHTML = "computer wins";
     image_winner.style.backgroundImage = image_urls[3]
+    app.me +=1;
+
   }
 
   else if( computer === 'scissors' && me === 'paper' ){
     // image_winner.innerHTML = "computer wins";
     image_winner.style.backgroundImage = image_urls[3]
+    app.me +=1;
+
   }
 
   else if( me === 'rock' && computer === 'scissors' ){
     // image_winner.innerHTML = "I win";
     image_winner.style.backgroundImage = image_urls[4]
+    app.computer +=1;
+
   }
 
   else if( me === 'paper' && computer === 'rock' ){
     // image_winner.innerHTML = "I win";
     image_winner.style.backgroundImage = image_urls[4]
+    app.computer +=1;
+
   }
 
   else if( me === 'scissors' && computer === 'paper' ){
     // image_winner.innerHTML = "I win";
     image_winner.style.backgroundImage = image_urls[4]
+    app.computer +=1;
+
   }
 
   else {
