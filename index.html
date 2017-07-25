@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rock Paper Scissors</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <h1>Play Rock Paper Scissors</h1>
+
+    <button onclick="playGame();">Play!</button>
+
+    <div id="outcome">
+      <div id="computer">
+        <div class="caption">Computer</div>
+        <div class="streak">0</div>
+      </div>
+
+      <div id="me">
+        <div class="caption">Me</div>
+        <div class="streak">0</div>
+      </div>
+
+      <div id="winner">
+        <div class="caption">Outcome</div>
+      </div>
+    </div>
+  </main>
+
+<script src="game.js"></script>
+</body>
+</html>
