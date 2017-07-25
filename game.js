@@ -43,7 +43,13 @@ function playGame() {
 
   // Generate random numbers for the throw
   const computer_choice = Math.floor(Math.random()*throws.length);
-  const me_choice = document.forms[1].elements['choice'].value;
+  let me_choice = 0;
+  if( game_style_flag == 0) {
+    me_choice = Math.floor(Math.random()*throws.length);
+  } else {
+    me_choice = document.forms[1].elements['choice'].value;
+  }
+
 
   // Extract the named choice
   const computer = throws[computer_choice];
