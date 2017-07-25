@@ -34,8 +34,8 @@ function playGame() {
   var image_computer = document.getElementById('computer');
   var image_winner = document.getElementById('winner');
 
-  image_me.style.backgroundImage = image_urls[computer_choice];
-  image_computer.style.backgroundImage = image_urls[me_choice];
+  image_me.style.backgroundImage = image_urls[me_choice];
+  image_computer.style.backgroundImage = image_urls[computer_choice];
   // image_me.innerHTML = "Me: " + me;
   // image_computer.innerHTML = "Computer: " + computer;
 
