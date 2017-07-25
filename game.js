@@ -4,7 +4,24 @@ var app = new Vue({
     me: 0,
     computer: 0
   }
-})
+});
+
+var game_style_flag = 0;
+
+var randomUserChoiceButton = document.getElementById('random-user-choice-game');
+var userChoiceButton = document.getElementById('user-choice-game');
+
+randomUserChoiceButton.addEventListener("click", function() {
+  game_style_flag = 0;
+  let user_choice_div = document.getElementById('user-choice');
+  user_choice_div.style.display = "none";
+});
+
+userChoiceButton.addEventListener("click", function () {
+  game_style_flag = 1;
+  let user_choice_div = document.getElementById('user-choice');
+  user_choice_div.style.display = "inline";
+});
 
 
 function playGame() {
@@ -26,7 +43,7 @@ function playGame() {
 
   // Generate random numbers for the throw
   const computer_choice = Math.floor(Math.random()*throws.length);
-  const me_choice = document.forms[0].elements['choice'].value;
+  const me_choice = document.forms[1].elements['choice'].value;
 
   // Extract the named choice
   const computer = throws[computer_choice];
