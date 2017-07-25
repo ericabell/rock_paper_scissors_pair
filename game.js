@@ -15,7 +15,10 @@ function playGame() {
 
   // Variables
   const computer_choice = Math.floor(Math.random()*throws.length);
-  const me_choice = Math.floor(Math.random()*throws.length);
+  // const me_choice = Math.floor(Math.random()*throws.length);
+  // get the user's choice from the radio box instead of random
+  const me_choice = document.forms[0].elements['choice'].value;
+
   const computer = throws[computer_choice];
   let me = throws[me_choice];
 
