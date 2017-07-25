@@ -12,6 +12,16 @@ h1 {
   text-align: center;
 }
 
+form {
+  flex-basis: 100%;
+  text-align: center;
+  margin: 20px;
+}
+
+#user-choice {
+  display: none;
+}
+
 button {
   flex-basis: 50%;
   padding: 20px 20px;
