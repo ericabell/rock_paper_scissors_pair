@@ -17,6 +17,13 @@ function playGame() {
   const throws = ['rock', 'paper', 'scissors'];
   const image_urls = ['url(resources/rock.png)', 'url(resources/paper.png)', 'url(resources/scissors.png)', 'url(resources/win.jpeg)', 'url(resources/looser.jpeg)', 'url(resources/tie.jpeg)']
 
+  const rock_img = 0;
+  const paper_img = 1;
+  const scissors_img = 2;
+  const win_img = 3;
+  const lose_img = 4;
+  const tie_img = 5;
+
   // Variables
   const computer_choice = Math.floor(Math.random()*throws.length);
   const me_choice = Math.floor(Math.random()*throws.length);
@@ -38,42 +45,42 @@ function playGame() {
 
   if( computer === 'rock' && me === 'scissors' ){
     // image_winner.innerHTML = "computer wins";
-    image_winner.style.backgroundImage = image_urls[3]
-    app.me +=1;
+    image_winner.style.backgroundImage = image_urls[lose_img]
+    app.computer +=1;
   }
 
   else if( computer === 'paper' && me === 'rock' ){
     // image_winner.innerHTML = "computer wins";
-    image_winner.style.backgroundImage = image_urls[3]
-    app.me +=1;
+    image_winner.style.backgroundImage = image_urls[lose_img]
+    app.computer +=1;
 
   }
 
   else if( computer === 'scissors' && me === 'paper' ){
     // image_winner.innerHTML = "computer wins";
-    image_winner.style.backgroundImage = image_urls[3]
-    app.me +=1;
+    image_winner.style.backgroundImage = image_urls[lose_img]
+    app.computer +=1;
 
   }
 
   else if( me === 'rock' && computer === 'scissors' ){
     // image_winner.innerHTML = "I win";
-    image_winner.style.backgroundImage = image_urls[4]
-    app.computer +=1;
+    image_winner.style.backgroundImage = image_urls[win_img]
+    app.me +=1;
 
   }
 
   else if( me === 'paper' && computer === 'rock' ){
     // image_winner.innerHTML = "I win";
-    image_winner.style.backgroundImage = image_urls[4]
-    app.computer +=1;
+    image_winner.style.backgroundImage = image_urls[win_img]
+    app.me +=1;
 
   }
 
   else if( me === 'scissors' && computer === 'paper' ){
     // image_winner.innerHTML = "I win";
-    image_winner.style.backgroundImage = image_urls[4]
-    app.computer +=1;
+    image_winner.style.backgroundImage = image_urls[win_img]
+    app.me +=1;
 
   }
 
